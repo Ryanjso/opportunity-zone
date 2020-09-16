@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.fullPage {
+  height: 100vh;
+  min-height: 680px;
+  width: 100%;
+  background-color: #fffef6;
+  background-image: url('images/city.svg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  padding-top: 110px;
+  box-sizing: border-box;
+}
+
+.fullPage > h1 {
+  font-size: 56px;
+  text-align: center;
+  font-family: 'Noto Serif', serif;
+  color: #5628d2;
+}
+
+.centerForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: stretch;
+  font-family: 'Roboto', sans-serif;
+}
+
+.centerForm > form {
+  background-color: #fffef6;
+  display: flex;
+  align-items: center;
+  padding: 14px 22px;
+  border-radius: 10px;
+  box-shadow: 0px 11px 40px #ecead8;
+  margin-top: 100px;
+  border: 3px solid #ffc30d;
+  box-sizing: border-box;
+  max-width: 80%;
+  width: 750px;
+}
+
+.centerForm > form > button {
+  border: none;
+  background-color: #ffc30d;
+  font-weight: 500;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 22px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 20px;
+  outline: none;
+}
+
+.centerForm > form > input {
+  border: none;
+  /* width: 600px; */
+  flex-grow: 1;
+  outline: none;
+  font-size: 20px;
+  background-color: #fffef6;
+  color: #8c8c8c;
+}
+
+.centerForm > form > input::placeholder {
+  color: #8c8c8c60;
+}
+
+.apiResults {
+  margin-top: 10px;
+  background-color: #fffef6;
+  width: 748px;
+  max-width: 80%;
+  box-shadow: 0px 11px 40px #e2e0cd;
+  min-height: 60px;
+  border-radius: 10px;
+  padding: 10px 20px 4px 20px;
+  box-sizing: border-box;
+}
+
+.individualResult {
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.individualResult p {
+  color: #8c8c8c;
+  font-size: 18px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.check {
+  width: 40px;
+  height: 40px;
+  background-image: url('images/check.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-right: 18px;
+}
+
+.x {
+  width: 40px;
+  height: 40px;
+  background-image: url('images/x.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-right: 18px;
+}
+
+.hidden {
+  display: none;
+}
