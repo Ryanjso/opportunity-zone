@@ -5,6 +5,14 @@ $(document).ready(function () {
   $('#addressForm').submit(function () {
     const address = $('#addressInput').val();
     resetResults();
+    if (!address) {
+      if ($('.apiResults').hasClass('hidden')) {
+        $('.apiResults').removeClass('hidden');
+      }
+
+      addressNotRecognized();
+      return false;
+    }
     getGeocodeData(address);
     return false;
   });
@@ -23,8 +31,9 @@ function getGeocodeData(address) {
     data: JSON.stringify(data),
     contentType: 'application/json; charset=utf-8',
     success: function (res) {
-      $('.apiResults').removeClass('hidden');
-
+      if ($('.apiResults').hasClass('hidden')) {
+        $('.apiResults').removeClass('hidden');
+      }
       if (res.message === 'No Match.') {
         addressNotRecognized();
       } else {
